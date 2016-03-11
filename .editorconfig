@@ -1,0 +1,29 @@
+root = true
+[*]
+indent_style = space
+# editando la tabulación que deseamos establecer en nuestro caso sería de 4
+indent_size = 2
+# El final de línea lo marque como LF
+end_of_line = lf
+# editando la codificación de nuestra aplicación en nuestro caso utf-8
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+# omitimos la tabulacipon para los archivos .md
+[*.md]
+trim_trailing_whitespace = false
+indent_style = tab
+
+[*.php]
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+
+[*.blade.php]
+indent_style = space
+indent_size = 2
+
+[*.less]
+indent_style = space
+indent_size = 4
+insert_final_newline = true

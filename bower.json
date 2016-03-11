@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Juan <juanito1119@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ]
+}

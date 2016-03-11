@@ -6,13 +6,11 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Bienvenidos al primer curso de php basado en [Laravel 5.2](https://laravel.com/docs/5.2/), en el proyecto puedes encontrar una carpeta con el nombre de doc, en donde cuentas con el diagrama de la base de datos y el mockups de lo que al terminar este curso tendremos una aplicación total mente funcionando para su uso personal
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Tareas Automatizadas
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Dicho proyecto contamos con 
 
 ## Contributing
 
