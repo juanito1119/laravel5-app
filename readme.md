@@ -10,16 +10,15 @@ Bienvenidos al primer curso de php basado en [Laravel 5.2](https://laravel.com/d
 
 ## Tareas Automatizadas
 
-Dicho proyecto contamos con 
+Dicho proyecto contamos con [Grunt](http://gruntjs.com/), un automatizador de tareas el cual nos permite recargar el navegardor cuando hagamos un cambio en la app así como con los archivos less compilarlos a css. La instalación es muy sencilla debemos contar con [Node](https://nodejs.org/en/) instalado en nuestro ordenar y ejecutar en el directorio de nuestro proyecto el siguiente comando.
 
-## Contributing
+```sh
+$ npm install 
+```
+luego de haber reaizado las instalaciones de las dependencias no tenemos más que ejecutar grunt con el siguiente comando 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+```sh
+$ grunt
+```
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
