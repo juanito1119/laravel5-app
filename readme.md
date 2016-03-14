@@ -6,7 +6,18 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Bienvenidos al primer curso de php basado en [Laravel 5.2](https://laravel.com/docs/5.2/), en el proyecto puedes encontrar una carpeta con el nombre de doc, en donde cuentas con el diagrama de la base de datos y el mockups de lo que al terminar este curso tendremos una aplicación total mente funcionando para su uso personal
+Bienvenidos al primer curso de php basado en [Laravel 5.2](https://laravel.com/docs/5.2/), en el proyecto puedes encontrar una carpeta con el nombre de doc, en donde cuentas con el diagrama de la base de datos y el mockup de la aplicación que deseamos realizar. Como primer paso debemos de instalar las dependencias con con componser.
+
+```sh
+$ composer install 
+```
+
+## Bower
+Como se ha mencionado en clases [bower](http://bower.io/), es un gestor de dependencias del lado del Front-end, el cual nos facilitará dicha gestión para instalar las dependencias solo debemos escribir en terminal el siguiente comando.
+
+```sh
+$ bower install 
+```
 
 ## Tareas Automatizadas
 
