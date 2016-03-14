@@ -6,7 +6,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Bienvenidos al primer curso de php basado en [Laravel 5.2](https://laravel.com/docs/5.2/), en el proyecto puedes encontrar una carpeta con el nombre de doc, en donde cuentas con el diagrama de la base de datos y el mockup de la aplicación que deseamos realizar. Como primer paso debemos de instalar las dependencias con con componser.
+Bienvenidos al primer curso de php basado en [Laravel 5.2](https://laravel.com/docs/5.2/), en el proyecto puedes encontrar una carpeta con el nombre de doc, en donde cuentas con el diagrama de la base de datos y el mockup de la aplicación que deseamos realizar. Como primer paso debemos de instalar las dependencias con componser.
 
 ```sh
 $ composer install 
