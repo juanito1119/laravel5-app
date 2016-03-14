@@ -17,11 +17,11 @@ module.exports = function(grunt) {
       less: {
         files: ["public/less/**/**/**/**/*"],
         tasks: ["less"],
-        options: { livereload: true } 
+        options: { livereload: true }
       },
       js:{
         files:['public/js/**/**/**/**/**/*'],
-        options: { livereload: true } 
+        options: { livereload: true }
       }
     },
     connect: {
@@ -38,13 +38,13 @@ module.exports = function(grunt) {
           compress: true,
           yuicompress: false,
           optimization: 2,
-          cleancss:false,  
-          paths: ["css"],   
+          cleancss:false,
+          paths: ["css"],
           syncImport: false,
           strictUnits:false,
           strictMath: true,
           strictImports: true,
-          ieCompat: false    
+          ieCompat: false
         },
         files: {
           "public/css/app.css": "public/less/app.less"
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default',[
-    'connect:server', 
-    'watch' 
+    'connect:server',
+    'watch'
   ]);
 
 };
