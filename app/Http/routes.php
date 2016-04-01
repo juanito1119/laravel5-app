@@ -34,4 +34,5 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('home', 'HomeController@index');
+    Route::post('authenticate', 'Auth\AuthController@authenticate');
 });

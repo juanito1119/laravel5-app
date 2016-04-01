@@ -7,6 +7,13 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+# dependencias
+# esta depedencia nos permite usar post y get
+use Request;
+# este facade nos permite responder en json
+use Response;
+
+
 
 class AuthController extends Controller
 {
@@ -74,4 +81,26 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }
+
+    protected function authenticate()
+    {
+        $response = array();
+
+        $data     = array(
+            'email'     => Request()->input('email'),
+            'password'  => Request()->input('password'),
+        );
+
+
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+            // Authentication passed...
+            $response['authenticate']   = true;
+        }else{
+            $response['authenticate']   = false;
+        }
+
+
+        return response()->json($response);
+    }
+
 }

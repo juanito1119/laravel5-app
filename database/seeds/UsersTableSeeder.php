@@ -16,7 +16,6 @@ class UsersTableSeeder extends Seeder
             'email' 		        => 'me@juanfrancisco.io',
             'address'               => 'Ciudad de Guatemala',
             'phone'                 => '2222-2222',
-            'super'                 => 1,
             'password' 		        => Hash::make('admin'),
             'created_at'            => date('Y-m-d H:i:s')
         ]);

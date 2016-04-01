@@ -23,11 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('phone');
             $table->text('address');
             $table->integer('rol_id')->nullable();
-            $table->integer('gender_id')->nullable();
             $table->integer('pagination')->nullable();
             $table->rememberToken()->nullable();
-            $table->string('language',15);
-            $table->integer('status_id');
             $table->integer('users_id');
             $table->integer('users_id_update')->nullable();
             $table->integer('users_id_delete')->nullable();
