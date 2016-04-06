@@ -25,11 +25,11 @@ class CreateUsersTable extends Migration
             $table->integer('rol_id')->nullable();
             $table->integer('pagination')->nullable();
             $table->rememberToken()->nullable();
+            $table->integer('status_id');
             $table->integer('users_id');
             $table->integer('users_id_update')->nullable();
             $table->integer('users_id_delete')->nullable();
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at')->nullable();
+            $table->timestamps();
             $table->timestamp('deleted_at')->nullable();
         });
     }

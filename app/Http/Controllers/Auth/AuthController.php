@@ -12,6 +12,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Request;
 # este facade nos permite responder en json
 use Response;
+use Auth;
 
 
 
@@ -35,7 +36,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = 'dashboard';
 
     /**
      * Create a new authentication controller instance.
@@ -82,25 +83,37 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    protected function authenticate()
+    protected function authentication()
     {
-        $response = array();
+        # data para hacer el login
+        $email      = request()->input('email');
+        $password   = request()->input('password');
+        $remember   = request()->input('remember');
 
-        $data     = array(
-            'email'     => Request()->input('email'),
-            'password'  => Request()->input('password'),
-        );
+        # validamos si los credenciales del usuario son correctos
+        if( Auth::attempt(array( 'email' => $email, 'password' => $password ), $remember) ){
 
+            # validamos si el usuario se encuentra con el status de alta
+            if( Auth::user()->status_id == 1 ):
+                $response['authentication']   = true;
+            else:
+                $response['authentication']   = 2;
+                Auth::logout();
+            endif;
 
-        if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            // Authentication passed...
-            $response['authenticate']   = true;
         }else{
-            $response['authenticate']   = false;
+            $response['authentication']   = false;
         }
 
-
+        # respondemos con json
         return response()->json($response);
+
+    }
+
+    protected function logout()
+    {
+        Auth::logout();
+        return redirect()->intended('login');
     }
 
 }

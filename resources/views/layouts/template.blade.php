@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Login</title>
+    <title>@yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- jQuery  -->
     <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
@@ -18,7 +18,6 @@
     <!-- jquery validation -->
     <script src="{{ asset('bower_components/jquery-validation/dist/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('bower_components/jquery-validation/src/localization/messages_es.js') }}"></script>
-    <script src="{{ asset('js/login.js') }}"></script>
     <!-- app style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,33 +27,32 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="login">
-    <div class="container-login">
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Login My App</h2>
-        <div class="form-group form-group label-floating is-empty">
-          <label for="emial" class="control-label">{{ trans('global.email') }}</label>
-          <input type="email" class="form-control" id="email" name="email">
-          <span class="help-block">{{ trans('global.login.legend_emial') }}</span>
-          <span class="material-input"></span>
+  <body>
+    <div class="navbar navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ url('dashboard') }}">My App</a>
         </div>
-        <div class="form-group form-group label-floating is-empty">
-          <label for="password" class="control-label">{{ trans('global.password') }}</label>
-          <input type="password" class="form-control" id="password" name="password">
-          <span class="help-block">{{ trans('global.login.legend_password') }}</span>
-          <span class="material-input"></span>
+        <div class="navbar-collapse collapse navbar-warning-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url('dashboard') }}">Usuarios</a></li>
+            <li><a href="{{ url('dashboard') }}">Status</a></li>
+            <li><a href="{{ url('dashboard') }}">Tareas</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url('logout') }}"> <i class="glyphicon glyphicon-off"></i></a></li>
+          </ul>
         </div>
-        <button class="btn btn-lg btn-raised btn-success  btn-block" type="submit">Sign in</button>
-        <div class="preloader hide">
-          <img src="{{ asset('img/progress.gif') }}">
-        </div>
-        <div class="show-error">
-          <p class="text-center text-danger hide">El usuario o contraseña son incorrectos</p>
-          <p class="text-center text-warning hide">El usuario se encuentra de baja</p>
-        </div>
-      </form>
+      </div>
+    </div>
+    <div class="container">
+      @yield('content')
     </div>
   </body>
-
-
 </html>

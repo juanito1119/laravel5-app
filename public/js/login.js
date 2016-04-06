@@ -26,14 +26,29 @@ $(document).on('ready', function(){
     console.log(data);
 
     $.ajax({
+      beforeSend: function(){
+        $('.show-error p').addClass('hide');
+        $('button[type=submit]').prop('disabled', true);
+        $('.preloader').removeClass('hide');
+      },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
-      url: "authenticate",
+      url: location.protocol+"authentication",
       type: "POST",
       data: data ,
       success: function (response) {
-        console.log(response);
+        $('button[type=submit]').prop('disabled', false);
+        $('.preloader').addClass('hide');
+        if( response.authentication == true ){
+          document.location.href='dashboard';
+        }
+        if( response.authentication == false ){
+          $('.show-error p.text-danger').removeClass('hide');
+        }
+        if( response.authentication == 2 ){
+          $('.show-error p.text-warning').removeClass('hide');
+        }
       },
       error: function(jqXHR, textStatus, errorThrown) {
 
