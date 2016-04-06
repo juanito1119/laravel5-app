@@ -28,7 +28,6 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('login', 'Auth\AuthController@index');
-    Route::get('home', 'HomeController@index');
     Route::post('authentication', 'Auth\AuthController@authentication');
 
 });
@@ -40,5 +39,8 @@ Route::group(['middleware'=> ['web','auth'] ], function(){
     Route::get('logout', 'Auth\AuthController@logout');
     Route::get('/', 'DashboardController@index');
     Route::get('dashboard', 'DashboardController@index');
+
+    # USERS
+    Route::get('users','Backend\UsersController@index');
 
 });

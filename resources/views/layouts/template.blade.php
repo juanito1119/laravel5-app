@@ -12,12 +12,20 @@
     <!-- Bootstrap -->
     <link href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <!-- font-awesome -->
+    <link href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="{{ asset('bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css') }}" rel="stylesheet">
     <script src="{{ asset('bower_components/bootstrap-material-design/dist/js/material.min.js') }}"></script>
     <!-- jquery validation -->
     <script src="{{ asset('bower_components/jquery-validation/dist/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('bower_components/jquery-validation/src/localization/messages_es.js') }}"></script>
+    <!-- datatables -->
+    <link href="{{ asset('bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
+    <!-- popconfirm -->
+    <script src="{{ asset('bower_components/popconfirm/jquery.popconfirm.js') }}" type="text/javascript"></script>
+
     <!-- app style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -41,7 +49,7 @@
         <div class="navbar-collapse collapse navbar-warning-collapse">
           <ul class="nav navbar-nav">
             <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
-            <li><a href="{{ url('dashboard') }}">Usuarios</a></li>
+            <li><a href="{{ url('users') }}">Usuarios</a></li>
             <li><a href="{{ url('dashboard') }}">Status</a></li>
             <li><a href="{{ url('dashboard') }}">Tareas</a></li>
           </ul>
@@ -51,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container container-app">
       @yield('content')
     </div>
   </body>
