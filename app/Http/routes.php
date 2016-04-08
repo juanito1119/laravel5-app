@@ -42,5 +42,13 @@ Route::group(['middleware'=> ['web','auth'] ], function(){
 
     # USERS
     Route::get('users','Backend\UsersController@index');
+    Route::get('users/create','Backend\UsersController@create');
+
+    # STATUS
+    Route::get('status','Backend\StatusController@index');
+    Route::get('status/create','Backend\StatusController@create');
+    Route::get('status/update/{id}','Backend\StatusController@update');
+    Route::get('status/delete/{id}','Backend\StatusController@delete');
+    Route::post('status/actions','Backend\StatusController@actions');
 
 });

@@ -1,7 +1,21 @@
 .btn {
+    color: @color-write !important;
     border-radius: 0;
     border:0;
+    text-transform: none !important;
+    font-weight: 200 !important;
+    outline: none !important;
 }
+.btn-action {
+    color: @color-write !important;
+    background: #009688 !important;
+    text-transform: none;
+    &:hover, &:active, &:focus {
+        color: @color-write;
+        background: #009688 !important;
+    }
+}
+
 .btn-primary {
     background-color: @color-primary;
     &:hover, &:active, &:focus {
@@ -9,9 +23,9 @@
     }
 }
 .btn-success {
-    background-color: @color-success !important;
+    background-color: @color-base !important;
     &:hover, &:active, &:focus {
-        background-color: @color-success !important;
+        background-color: @color-base !important;
     }
 }
 .btn-primary {

@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-  Usuarios
+  Status
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
   ?>
 
   <div class="col-lg-12 text-right">
-    <a href="{{ url('users/create') }}" class="btn btn-action">Crear </a>
+    <a href="{{ url('status/create') }}" class="btn btn-action">Crear </a>
   </div>
 
   <div class="col-lg-12">
@@ -41,19 +41,15 @@
           @foreach( $data as $item )
             <tr>
               <td>{{ $item->id }}</td>
-              <td>{{ $item->names .' '.$item->surnames }}</td>
-              <td>{{ $item->email }}</td>
-              <td>{{ $item->status_id }}</td>
+              <td>{{ $item->name }}</td>
+              <td>{{ $item->description }}</td>
+              <td>{{ $item->color }}</td>
               <td class="text-center">
-                <a href="{{ url('tarea/edit/'.$item->id)}}"><i class="fa fa-pencil"></i></a>
-                <a href="{{ url('tarea/delete/'.$item->id)}}" data-confirm-title="Eliminar" data-confirm-content="Desea eliminar el código {{ $item->id }}"><i class="fa fa-trash"></i></a>
+                <a href="{{ url('status/update/'.$item->id)}}"><i class="fa fa-pencil"></i></a>
+                <a href="{{ url('status/delete/'.$item->id)}}" data-confirm-title="Eliminar" data-confirm-content="Desea eliminar el código {{ $item->id }}"><i class="fa fa-trash"></i></a>
               </td>
             </tr>
           @endforeach
-        @else
-          <tr>
-            <h4 class="text-center text-danger">{{ trans('global.not_found') }}</h4>
-          </tr>
         @endif
       </tbody>
     </table>

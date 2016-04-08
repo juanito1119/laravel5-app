@@ -4,13 +4,15 @@ table.datatables {
 			i.fa{
 				color:@color-write;
 				background-color: @color-griss;
-				height: 25px;
-				width:25px;
+				height: 35px;
+				width:35px;
 				border-radius: 50%;
 				text-align: center;
-				padding-top: 5px;
+				padding-top: 10px;
 				margin: 0 auto;
 				position: relative;
+                margin-top: -6px;
+                margin-bottom: -3px;
 				&:hover{
 					background-color: @color-base;
 				}
@@ -25,27 +27,42 @@ table.datatables {
 	width:100;
 
 }
-#DataTables_Table_0_paginate {
+.dataTables_paginate {
 	display: block;
 	width: 100%;
 	text-align: center !important;
+    .previous{
+        color: @color-black;
+        text-decoration: none;
+        outline: none;
+    }
+    .next{
+        color: @color-black;
+        text-decoration: none;
+        outline: none;
+    }
+
 	span{
-		.paginate_button {
+        padding: 0 10px;
+		a {
 			font-size: 10px;
 			color:@color-write !important;
+            padding: 5px 8px;
 			background-color: @color-griss;
 			border-radius: 50%;
 			border:transparent;
+            text-decoration: none;
+            outline: none;
 			&.current {
 				background:@color-base !important;
-				border: transparent; 
+				border: transparent;
 			}
 			&:hover, &:active, &:focus {
 				background: @color-griss;
 				border: transparent;
-			}			
-		}	
+			}
+		}
 
 	}
-	
+
 }

@@ -19,4 +19,8 @@ class UsersController extends Controller
         return view('backend.users.index',$data);
     }
 
+    protected function create()
+    {
+        return view('backend.user.create');
+    }
 }

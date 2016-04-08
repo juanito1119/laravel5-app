@@ -21,7 +21,7 @@
     <script src="{{ asset('bower_components/jquery-validation/dist/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('bower_components/jquery-validation/src/localization/messages_es.js') }}"></script>
     <!-- datatables -->
-    <link href="{{ asset('bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bower_components/datatables/media/css/dataTables.material.min.css') }}" rel="stylesheet">
     <script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
     <!-- popconfirm -->
     <script src="{{ asset('bower_components/popconfirm/jquery.popconfirm.js') }}" type="text/javascript"></script>
@@ -50,7 +50,7 @@
           <ul class="nav navbar-nav">
             <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
             <li><a href="{{ url('users') }}">Usuarios</a></li>
-            <li><a href="{{ url('dashboard') }}">Status</a></li>
+            <li><a href="{{ url('status') }}">Status</a></li>
             <li><a href="{{ url('dashboard') }}">Tareas</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -59,8 +59,17 @@
         </div>
       </div>
     </div>
-    <div class="container container-app">
-      @yield('content')
+    <div class="container">
+      <h2 class="class-title">
+        @yield('title')
+      </h2>
+      <div class="container-app">
+        @yield('content')
+      </div>
     </div>
+    <script>
+      // inicializamos material que lo puedes encontrar en el siguiente link http://fezvrasta.github.io/bootstrap-material-design/#getting-started
+      $.material.init();
+    </script>
   </body>
 </html>
