@@ -34,7 +34,7 @@
         <a href="{{ url('status') }}">
           <button type="button" class="btn btn-success">Cancelar</button>
         </a>
-        <button type="submit" class="btn btn-success">Crear</button>
+        <button type="submit" class="btn btn-success">Actualizar</button>
       </div>
     </div>
   </form>
