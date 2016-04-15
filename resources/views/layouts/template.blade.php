@@ -25,6 +25,18 @@
     <script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
     <!-- popconfirm -->
     <script src="{{ asset('bower_components/popconfirm/jquery.popconfirm.js') }}" type="text/javascript"></script>
+    <!-- moment -->
+    <script src="{{ asset('bower_components/moment/min/moment.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bower_components/moment/locale/es.js') }}" type="text/javascript"></script>
+
+    <!-- eonasdan-bootstrap-datetimepicker -->
+    <link href="{{ asset('bower_components/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('bower_components/bootstrap-select/dist/js/bootstrap-select.min.js')}}" type="text/javascript"></script>
+    <!--  -->
+    <link href="{{ asset('bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
+
+
 
     <!-- app style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -51,7 +63,9 @@
             <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
             <li><a href="{{ url('users') }}">Usuarios</a></li>
             <li><a href="{{ url('status') }}">Status</a></li>
-            <li><a href="{{ url('dashboard') }}">Tareas</a></li>
+            <li><a href="{{ url('tasks') }}">Tareas</a></li>
+            <li><a href="{{ url('pagination') }}">Paginación</a></li>
+            <li><a href="{{ url('priority') }}">Prioridad</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{{ url('logout') }}"> <i class="glyphicon glyphicon-off"></i></a></li>

@@ -10,4 +10,11 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+
+    protected function dateFormatDD($data)
+    {
+        $date = date('Y-m-d H:i:s', strtotime( $data ) );
+        return $date;
+    }
 }

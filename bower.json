@@ -23,6 +23,9 @@
     "jquery-validation": "https://github.com/jzaefferer/jquery-validation.git#^1.15.0",
     "datatables": "https://github.com/DataTables/DataTables.git#~1.10.11",
     "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#~4.5.0",
-    "popconfirm": "https://github.com/Ifnot/PopConfirm.git#~0.4.4"
+    "popconfirm": "https://github.com/Ifnot/PopConfirm.git#~0.4.4",
+    "eonasdan-bootstrap-datetimepicker": "https://github.com/Eonasdan/bootstrap-datetimepicker.git#^4.17.37",
+    "moment": "^2.12.0",
+    "bootstrap-select": "https://github.com/silviomoreto/bootstrap-select.git#^1.10.0"
   }
 }

@@ -1,0 +1,50 @@
+@extends('layouts.template')
+
+@section('title')
+  {{ $action }}
+@endsection
+
+@section('content')
+
+
+  <div class="notification">
+    @if( isset($data) )
+      <div class="success">
+        <div class="header">
+          <span>Hola {{ Auth::user()->names }}</span>
+        </div>
+        <div class="caption">
+          <i class="fa fa-check-circle" aria-hidden="true"></i>
+        </div>
+        <div class="body">
+          @if( $action == 'create' )
+            <h2>Se ha Creado el registro <small>{{ $data->name }}</small></h2>
+            <a href="{{ url('tasks/create') }}" class="btn btn-raised active">.Crear Otro</a>
+            <a href="{{ url('tasks')}}" class="btn btn-raised active">Ver todos</a>
+          @elseif( $action == 'update' )
+            <h2>Se ha Actualizado el siguiente registro <small>{{ $data->name }}</small></h2>
+            <a href="{{ url('tasks')}}" class="btn btn-raised active">Ver todos</a>
+          @else
+            <h2>Se ha Eliminado el siguiente registro <small>{{ $data->name }}</small></h2>
+          @endif
+        </div>
+      </div>
+    @else
+      <div class="danger">
+        <div class="header">
+          <span>Hola {{ Auth::user()->names }}</span>
+        </div>
+        <div class="caption">
+          <i class="fa fa-warning" aria-hidden="true"></i>
+        </div>
+        <div class="body">
+          <h2>Error <small>{{ $error }}</small></h2>
+        </div>
+      </div>
+    @endif
+  </div>
+
+
+@endsection
+
+

@@ -4,9 +4,9 @@ namespace App\Models\Backend;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class Pagination extends Model
 {
-    protected $table    = 'status';
+    protected $table    = 'pagination';
     #guarded?
     protected $guarded  = array();
     #public $timestamps  = true;
@@ -14,7 +14,6 @@ class Status extends Model
 
     protected function getData()
     {
-        return Status::select('*')->where('deleted_at','=',NULL)->get();
+        return Pagination::select('*')->where('deleted_at','=',NULL)->get();
     }
-
 }

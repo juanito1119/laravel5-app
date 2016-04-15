@@ -20,6 +20,18 @@
             <input type="text" class="form-control" name="surnames" id="surnames" placeholder="Apellido">
           </div>
         </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-md-2 control-label">Correo</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="email" id="email" placeholder="Correo">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-md-2 control-label">Correo</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="email" id="email" placeholder="Correo">
+          </div>
+        </div>
       </div>
     </div>
   </form>

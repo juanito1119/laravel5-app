@@ -1,11 +1,11 @@
 @extends('layouts.template')
 
 @section('title')
-  Crear Status
+  Modify Priority
 @endsection
 
 @section('content')
-  <form method="post" action="{{ url('status/actions') }}">
+  <form method="post" action="{{ url('priority/actions') }}">
     <input type="hidden" id="action" name="action" value="update">
     <input type="hidden" id="id" name="id" value="{{ $data->id }}">
     <input type="hidden" id="_token" name="_token" value="{{ csrf_token() }}">
@@ -18,9 +18,9 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="inputEmail" class="col-md-2 control-label">Description</label>
+          <label for="inputEmail" class="col-md-2 control-label">Priority</label>
           <div class="col-md-10">
-            <input type="text" class="form-control" name="description" id="description" placeholder="Description" value="{{ $data->description }}">
+            <input type="text" class="form-control" name="priority" id="priority" placeholder="Priority" value="{{ $data->priority }}">
           </div>
         </div>
         <div class="form-group">
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="col-lg-12 text-center">
-        <a href="{{ url('status') }}">
+        <a href="{{ url('priority') }}">
           <button type="button" class="btn btn-success">Cancelar</button>
         </a>
         <button type="submit" class="btn btn-success">Modificar</button>

@@ -21,6 +21,6 @@ class UsersController extends Controller
 
     protected function create()
     {
-        return view('backend.user.create');
+        return view('backend.users.create');
     }
 }

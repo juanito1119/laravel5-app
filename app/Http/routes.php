@@ -51,4 +51,25 @@ Route::group(['middleware'=> ['web','auth'] ], function(){
     Route::get('status/delete/{id}','Backend\StatusController@delete');
     Route::post('status/actions','Backend\StatusController@actions');
 
+    # PAGINATION
+    Route::get('pagination','Backend\PaginationController@index');
+    Route::get('pagination/create','Backend\PaginationController@create');
+    Route::get('pagination/update/{id}','Backend\PaginationController@update');
+    Route::get('pagination/delete/{id}','Backend\PaginationController@delete');
+    Route::post('pagination/actions','Backend\PaginationController@actions');
+
+    # PAGINATION
+    Route::get('priority','Backend\PriorityController@index');
+    Route::get('priority/create','Backend\PriorityController@create');
+    Route::get('priority/update/{id}','Backend\PriorityController@update');
+    Route::get('priority/delete/{id}','Backend\PriorityController@delete');
+    Route::post('priority/actions','Backend\PriorityController@actions');
+
+    # TASKS
+    Route::get('tasks','Backend\TasksController@index');
+    Route::get('tasks/create','Backend\TasksController@create');
+    Route::get('tasks/update/{id}','Backend\TasksController@update');
+    Route::get('tasks/delete/{id}','Backend\TasksController@delete');
+    Route::post('tasks/actions','Backend\TasksController@actions');
+
 });

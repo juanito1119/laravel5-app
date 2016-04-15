@@ -18,3 +18,65 @@ h2.class-title {
     padding: 20px 10px;
     overflow: hidden;
 }
+
+.bootstrap-datetimepicker-widget {
+    z-index: 9;
+}
+
+.notification {
+    width: 450px;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #ddd;
+    padding-bottom: 20px;
+    .header {
+        width: 100%;
+        padding: 5px 10px;
+        background: red;
+        color: white;
+        margin-bottom: 10px;
+        small {
+            font-weight: 200;
+            color: white;
+        }
+    }
+    h2{
+        font-size: 18px;
+        font-weight: 200;
+        text-align: center;
+    }
+    .caption {
+        width: 100%;
+        position: relative;
+        display: block;
+        text-align: center;
+        i.fa {
+            font-size: 75px;
+        }
+    }
+    .success {
+        .header{
+            background-color: @color-base;
+        }
+        i.fa {
+            color: @color-base;
+        }
+    }
+    .danger {
+        .header{
+            background-color: @color-danger;
+        }
+        i.fa {
+            color: @color-danger;
+        }
+    }
+    .body {
+        text-align: center;
+        a.btn {
+            color: @color-write;
+            background-color: @color-base !important;
+        }
+    }
+
+}
