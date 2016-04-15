@@ -1,11 +1,14 @@
 @extends('layouts.template')
 
 @section('title')
-  {{ $action }}
 @endsection
 
 @section('content')
-
+  <style>
+    .container-app{
+      background-color: transparent;
+    }
+  </style>
 
   <div class="notification">
     @if( isset($data) )
