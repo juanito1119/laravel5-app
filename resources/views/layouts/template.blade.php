@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -23,6 +23,13 @@
     <!-- datatables -->
     <link href="{{ asset('bower_components/datatables/media/css/dataTables.material.min.css') }}" rel="stylesheet">
     <script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
+    <!-- datatables-responsive -->
+    <link href="{{ asset('bower_components/datatables-responsive/files/1.10/css/datatables.responsive.css') }}" rel="stylesheet">
+    <script src="{{ asset('bower_components/datatables-responsive/files/1.10/js/datatables.responsive.js')}}" type="text/javascript"></script>
+    <!-- datatables-responsive -->
+    <script src="{{ asset('bower_components/datatables-tabletools/js/dataTables.tableTools.js')}}" type="text/javascript"></script>
+
+
     <!-- popconfirm -->
     <script src="{{ asset('bower_components/popconfirm/jquery.popconfirm.js') }}" type="text/javascript"></script>
     <!-- moment -->

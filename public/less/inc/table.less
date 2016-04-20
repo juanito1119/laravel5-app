@@ -17,6 +17,9 @@ table.datatables {
 					background-color: @color-base;
 				}
 			}
+            .btn {
+                margin: 0;
+            }
 		}
 	}
 
@@ -65,4 +68,44 @@ table.datatables {
 
 	}
 
+}
+.dataTables_length {
+    display:inline-block;
+    label {
+        select {
+            width:50px;
+        }
+    }
+}
+.dataTables_filter {
+    display:inline-block;
+    width:80%;
+    label {
+        width:100%;
+        input {
+            width:100%;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            font-weight: 200;
+            padding: 5px 10px;
+            color:#000;
+        }
+    }
+}
+
+.DTTT_container {
+    text-align: right;
+    .DTTT_button_text {
+        .fa-plus {
+            height:35px;
+            width:35px;
+            background-color: @color-base;
+            border-radius: 50%;
+            color: @color-write;
+            text-align: center;
+            padding-top: 9px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    }
 }

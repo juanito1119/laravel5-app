@@ -26,6 +26,8 @@
     "popconfirm": "https://github.com/Ifnot/PopConfirm.git#~0.4.4",
     "eonasdan-bootstrap-datetimepicker": "https://github.com/Eonasdan/bootstrap-datetimepicker.git#^4.17.37",
     "moment": "^2.12.0",
-    "bootstrap-select": "https://github.com/silviomoreto/bootstrap-select.git#^1.10.0"
+    "bootstrap-select": "https://github.com/silviomoreto/bootstrap-select.git#^1.10.0",
+    "datatables-responsive": "https://github.com/Comanche/datatables-responsive.git",
+    "datatables-tabletools": "https://github.com/DataTables/TableTools.git#^2.2.4"
   }
 }

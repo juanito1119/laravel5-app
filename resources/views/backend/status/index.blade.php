@@ -11,17 +11,13 @@
     #echo '</pre>';
   ?>
 
-  <div class="col-lg-12 text-right">
-    <a href="{{ url('status/create') }}" class="btn btn-action">Crear </a>
-  </div>
-
   <div class="col-lg-12">
     <table class="datatables table table-hover" data-paging="true" data-filtering="true" data-sorting="true">
       <thead>
         <tr>
-          <th>Id</th>
+          <th data-class="expand">Id</th>
           <th>Name</th>
-          <th>Mail</th>
+          <th data-hide="phone">Descripción</th>
           <th>Status</th>
           <th>Acciones</th>
         </tr>
@@ -43,7 +39,7 @@
               <td>{{ $item->id }}</td>
               <td>{{ $item->name }}</td>
               <td>{{ $item->description }}</td>
-              <td>{{ $item->color }}</td>
+              <td><button class="btn btn-xs" style="background-color: {{  $item->color }}">{{ $item->color }}</button></td>
               <td class="text-center">
                 <a href="{{ url('status/update/'.$item->id)}}"><i class="fa fa-pencil"></i></a>
                 <a href="{{ url('status/delete/'.$item->id)}}" data-confirm-title="Eliminar" data-confirm-content="Desea eliminar el código {{ $item->id }}"><i class="fa fa-trash"></i></a>
@@ -54,26 +50,7 @@
       </tbody>
     </table>
   </div>
-  <script type="text/javascript">
-      $(document).on('ready', function(){
-          $('table.datatables').DataTable({
-              columnDefs: [
-                  {
-                      searchable: true,
-                      orderable: true,
-                      targets: 'all'
-                  }
-              ],
-              order: [[ 0, "ASC" ]]
-          });
-
-          $("table.datatables tbody a").popConfirm({
-              yesBtn: "Si",
-              noBtn: "No",
-              placement: 'left'
-          });
-      });
-  </script>
+  <script src="{{ asset('js/backend/status/index.js') }}"></script>
 @endsection
 
 
