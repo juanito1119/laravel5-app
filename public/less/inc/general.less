@@ -23,6 +23,40 @@ h2.class-title {
     z-index: 9;
 }
 
+.popover {
+    background-color: @color-write !important;
+    border-radius: 0 !important;
+    h3 {
+        background-color: @color-write !important;
+        color: #777 !important;
+        text-align: center;
+    }
+    .popover-content {
+        color: #777;
+        padding:5px 10px;
+        padding-top: 5px;
+        text-align: center;
+
+        p {
+            padding:0;
+            margin:0;
+            button {
+                width:40%;
+                margin:0;
+                padding: 2px;
+                text-align: center;
+                text-transform: capitalize;
+                &.confirm-dialog-btn-abord {
+                    background-color: @color-griss !important;
+                }
+                &.confirm-dialog-btn-confirm {
+                    background-color: @color-danger !important;
+                }
+            }
+        }
+    }
+}
+
 .notification {
     width: 450px;
     margin-bottom: 50px;
@@ -80,4 +114,18 @@ h2.class-title {
         }
     }
 
+}
+.navbar {
+    background-color: @color-base !important;
+    .navbar-brand {
+        line-height: 25px;
+        img {
+            display: inline-block;
+            position: relative;
+            height: 36px;
+            top: -4px;
+            width: 31px;
+            margin-right: 5px;
+        }
+    }
 }

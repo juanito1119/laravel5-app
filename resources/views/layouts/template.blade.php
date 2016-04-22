@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png" sizes="16x16">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>@yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -63,16 +64,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ url('dashboard') }}">My App</a>
+          <a class="navbar-brand" href="{{ url('dashboard') }}"><img src="{{ asset('logo.png') }}">  My App</a>
         </div>
         <div class="navbar-collapse collapse navbar-warning-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="{{ url('dashboard') }}">Dashboard</a></li>
-            <li><a href="{{ url('users') }}">Usuarios</a></li>
-            <li><a href="{{ url('status') }}">Status</a></li>
-            <li><a href="{{ url('tasks') }}">Tareas</a></li>
-            <li><a href="{{ url('pagination') }}">Paginación</a></li>
-            <li><a href="{{ url('priority') }}">Prioridad</a></li>
+            <li><a data-url="dashboard" href="{{ url('dashboard') }}">Dashboard</a></li>
+            <li><a data-url="users" href="{{ url('users') }}">Usuarios</a></li>
+            <li><a data-url="status" href="{{ url('status') }}">Status</a></li>
+            <li><a data-url="tasks" href="{{ url('tasks') }}">Tareas</a></li>
+            <li><a data-url="pagination" href="{{ url('pagination') }}">Paginación</a></li>
+            <li><a data-url="priority" href="{{ url('priority') }}">Prioridad</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{{ url('logout') }}"> <i class="glyphicon glyphicon-off"></i></a></li>
@@ -91,6 +92,18 @@
     <script>
       // inicializamos material que lo puedes encontrar en el siguiente link http://fezvrasta.github.io/bootstrap-material-design/#getting-started
       $.material.init();
+
+      $('ul.nav li').each(function(){
+        var urlCheck    = '{{ Request::segment(1) }}';
+        var urlOriginal = $(this).children('a').data('url');
+        //console.log(urlOriginal);
+        //console.log(urlCheck);
+        //console.log( urlCheck == urlOriginal );
+        if( urlCheck == urlOriginal ){
+          $(this).addClass('active');
+        }
+      });
+
     </script>
   </body>
 </html>

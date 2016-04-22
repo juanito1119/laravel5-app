@@ -42,7 +42,7 @@
               <td><button class="btn btn-xs" style="background-color: {{  $item->color }}">{{ $item->color }}</button></td>
               <td class="text-center">
                 <a href="{{ url('status/update/'.$item->id)}}"><i class="fa fa-pencil"></i></a>
-                <a href="{{ url('status/delete/'.$item->id)}}" data-confirm-title="Eliminar" data-confirm-content="Desea eliminar el código {{ $item->id }}"><i class="fa fa-trash"></i></a>
+                <a class="delete" href="{{ url('status/delete/'.$item->id)}}" data-confirm-title="Eliminar" data-confirm-content="Desea eliminar el código {{ $item->id }}"><i class="fa fa-trash"></i></a>
               </td>
             </tr>
           @endforeach

@@ -45,7 +45,7 @@ $(document).on('ready', function(){
       aButtons: [
         {
           sExtends    : 'text',
-          sButtonText : '<i class="fa fa-plus"></i>'
+          sButtonText : '<a href="'+window.location.origin+'/status/create"><i class="fa fa-plus"></i></a>'
         }
       ]
     },
@@ -59,7 +59,7 @@ $(document).on('ready', function(){
     order: [[ 0, "ASC" ]]
   });
 
-  $("table.datatables tbody a").popConfirm({
+  $("table.datatables tbody a.delete").popConfirm({
     yesBtn: "Si",
     noBtn: "No",
     placement: 'left'

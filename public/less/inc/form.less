@@ -6,4 +6,20 @@
         color: @color-danger;
         font-size: 11px;
     }
+    .bootstrap-select {
+        width: 100% !important;
+        .btn {
+            color: #777 !important;
+            background-color: @color-write;
+            outline: none !important;
+            border-bottom: 1px solid #ddd;
+            padding: 3px 2px;
+            &:hover, &:active, &:focus{
+                background-color: @color-write;
+            }
+            .filter-option {
+                font-size: 12px;
+            }
+        }
+    }
 }

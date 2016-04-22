@@ -1,6 +1,22 @@
 table.datatables {
+    thead{
+        th{
+            color: #777;
+            font-size: 12px !important;
+            font-weight: 400 !important;
+        }
+    }
 	tbody{
 		td {
+            color: @color-griss-oscuro !important;
+            font-size: 12px;
+            font-weight: 200;
+            &.dataTables_empty {
+                color: @color-danger;
+                font-size: 18px;
+                font-weight: 200;
+                text-align: center;
+            }
 			i.fa{
 				color:@color-write;
 				background-color: @color-griss;
@@ -25,6 +41,7 @@ table.datatables {
 
 }
 .dataTables_info {
+    color:@color-griss-oscuro !important;
 	float: none !important;
 	text-align: center !important;
 	width:100;
@@ -35,12 +52,12 @@ table.datatables {
 	width: 100%;
 	text-align: center !important;
     .previous{
-        color: @color-black;
+        color: @color-griss-oscuro;
         text-decoration: none;
         outline: none;
     }
     .next{
-        color: @color-black;
+        color: @color-griss-oscuro;
         text-decoration: none;
         outline: none;
     }

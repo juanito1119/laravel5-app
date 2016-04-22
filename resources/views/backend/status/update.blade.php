@@ -38,6 +38,12 @@
       </div>
     </div>
   </form>
+
+  <!-- eonasdan-bootstrap-datetimepicker -->
+  <link href="{{ asset('bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css') }}" rel="stylesheet">
+  <script src="{{ asset('bower_components/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js')}}" type="text/javascript"></script>
+  <!-- view -->
+  <script src="{{ asset('js/backend/status/create.js')}}"></script>
 @endsection
 
 
